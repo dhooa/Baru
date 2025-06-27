@@ -55,23 +55,19 @@ const TravelLocation = () => {
     <section>
       <div className="relative">
         <button
-          className="flex flex-row gap-x-2 items-center border border-primary px-2.5 py-1.5 rounded-primary"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <BiMap className="text-xl" />
           <span className="flex flex-row gap-x-1 items-center text-sm">
-            {selectedNagari ? (
-              <>
-                {selectedKecamatan} - {selectedNagari}
-              </>
-            ) : (
-              <>
-                Pilih Kecamatan / Nagari
-                <BiChevronDown />
-              </>
-            )}
-          </span>
-        </button>
+  {selectedNagari ? (
+    <>
+      {selectedKecamatan} - {selectedNagari}
+    </>
+  ) : (
+    <>
+      Pilih Kecamatan / Nagari
+      <BiChevronDown />
+    </>
+  )}
+</span>
+        
 
         {isOpen && (
           <div className="absolute top-full left-0 bg-secondary p-2.5 rounded shadow mt-2 z-50 w-52">
